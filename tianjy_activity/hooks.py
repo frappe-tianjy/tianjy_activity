@@ -7,6 +7,22 @@ app_description = "Tianjy Activity"
 app_email = "guigu"
 app_license = "MIT"
 
+# Document Events
+# ---------------
+# Hook on document methods and events
+
+doc_events = {
+	"*": {
+		"on_change": "tianjy_activity.document.on_change",
+		"on_trash": "tianjy_activity.document.on_trash",
+		"after_rename": "tianjy_activity.document.after_rename",
+	},
+	"Comment": {
+		"on_change": "tianjy_activity.document.comment_on_change",
+		"on_trash": "tianjy_activity.document.comment_on_trash",
+	}
+}
+
 # Includes in <head>
 # ------------------
 
@@ -114,17 +130,6 @@ app_license = "MIT"
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
 
 # Scheduled Tasks
 # ---------------

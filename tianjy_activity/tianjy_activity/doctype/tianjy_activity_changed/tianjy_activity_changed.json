@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "creation": "2023-10-12 11:19:23.831042",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "field",
+  "new",
+  "old",
+  "row_field",
+  "row_name",
+  "row_index"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "field",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "field",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "new",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "New",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "old",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "Old",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "row_field",
+   "fieldtype": "Data",
+   "label": "Row Field",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "row_name",
+   "fieldtype": "Data",
+   "label": "Row Name",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "row_index",
+   "fieldtype": "Data",
+   "label": "Row Index",
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-12 13:29:03.055406",
+ "modified_by": "Administrator",
+ "module": "Tianjy Activity",
+ "name": "Tianjy Activity Changed",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "tianjy_organization_filter_method": "Equal"
+}

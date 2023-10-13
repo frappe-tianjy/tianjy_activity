@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2023-10-10 15:38:24.867945",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doc_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "doc_type",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-10 17:28:41.870084",
+ "modified_by": "Administrator",
+ "module": "Tianjy Activity",
+ "name": "Tianjy Activity Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "tianjy_organization_filter_method": "Equal"
+}

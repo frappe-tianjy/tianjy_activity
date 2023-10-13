@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "creation": "2023-10-10 15:37:34.936738",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doc_type",
+  "doc",
+  "column_break_pm8h6",
+  "title",
+  "organization",
+  "section_break_jtpbr",
+  "type",
+  "column_break_5yszp",
+  "comment",
+  "section_break_df5ww",
+  "old_name",
+  "merge",
+  "section_break_wnvw0",
+  "changed",
+  "section_break_r36rw",
+  "old"
+ ],
+ "fields": [
+  {
+   "fieldname": "doc_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "DocType",
+   "options": "DocType",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "doc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Organization",
+   "options": "Tianjy Organization",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "changed",
+   "fieldtype": "Table",
+   "label": "Changed",
+   "options": "Tianjy Activity Changed",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_pm8h6",
+   "fieldtype": "Column Break",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_jtpbr",
+   "fieldtype": "Section Break",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.type === 'Rename'",
+   "fieldname": "section_break_df5ww",
+   "fieldtype": "Section Break",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "old_name",
+   "fieldtype": "Data",
+   "label": "Old Name",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_wnvw0",
+   "fieldtype": "Section Break",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_5yszp",
+   "fieldtype": "Column Break",
+   "set_only_once": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "merge",
+   "fieldtype": "Check",
+   "label": "Merge",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_r36rw",
+   "fieldtype": "Section Break",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "old",
+   "fieldtype": "Code",
+   "set_only_once": 1
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-13 13:51:43.441489",
+ "modified_by": "Administrator",
+ "module": "Tianjy Activity",
+ "name": "Tianjy Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tianjy Activity Browser",
+   "share": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "tianjy_organization_field": "organization",
+ "tianjy_organization_filter_method": "Equal",
+ "title_field": "title",
+ "translated_doctype": 1
+}
