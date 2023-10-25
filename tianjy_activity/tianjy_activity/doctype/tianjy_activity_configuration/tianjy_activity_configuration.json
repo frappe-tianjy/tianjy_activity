@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "field:doc_type",
  "creation": "2023-10-10 15:38:24.867945",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,16 +13,21 @@
   {
    "fieldname": "doc_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "DocType",
-   "options": "DocType"
+   "options": "DocType",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 14:20:56.021319",
+ "modified": "2023-10-25 16:00:30.262659",
  "modified_by": "Administrator",
  "module": "Tianjy Activity",
  "name": "Tianjy Activity Configuration",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
