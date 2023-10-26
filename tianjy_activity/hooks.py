@@ -6,6 +6,7 @@ app_publisher = "guigu"
 app_description = "Tianjy Activity"
 app_email = "guigu"
 app_license = "MIT"
+required_apps = ["tianjy_organization"]
 
 # Document Events
 # ---------------
@@ -20,7 +21,22 @@ doc_events = {
 	"Comment": {
 		"on_change": "tianjy_activity.document.comment_on_change",
 		"on_trash": "tianjy_activity.document.comment_on_trash",
-	}
+	},
+	"File": {
+		"after_insert": "tianjy_activity.document.file_after_insert",
+		"on_trash": "tianjy_activity.document.file_on_trash",
+	},
+}
+tianjy_types = {
+	"Select": {
+		"to_text": "tianjy_activity.to_text.select",
+	},
+	"Dynamic Link": {
+		"to_text": "tianjy_activity.to_text.dynamic_link",
+	},
+	"Link": {
+		"to_text": "tianjy_activity.to_text.link",
+	},
 }
 
 # Includes in <head>

@@ -21,7 +21,9 @@
   "section_break_wnvw0",
   "changed",
   "section_break_r36rw",
-  "old"
+  "new",
+  "old",
+  "file"
  ],
  "fields": [
   {
@@ -120,13 +122,26 @@
   {
    "fieldname": "old",
    "fieldtype": "Code",
+   "label": "Old Value",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "new",
+   "fieldtype": "Code",
+   "label": "New Value",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Data",
+   "label": "File",
    "set_only_once": 1
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 13:51:43.441489",
+ "modified": "2023-10-25 14:09:47.724589",
  "modified_by": "Administrator",
  "module": "Tianjy Activity",
  "name": "Tianjy Activity",
@@ -139,6 +154,16 @@
    "read": 1,
    "report": 1,
    "role": "Tianjy Activity Browser",
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tianjy Activity Manager",
    "share": 1
   }
  ],

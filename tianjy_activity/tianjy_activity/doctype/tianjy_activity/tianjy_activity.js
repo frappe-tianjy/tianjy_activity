@@ -4,10 +4,10 @@
 /**
  *
  * @param {HTMLElement} parent
- * @param {string} doctype
+ * @param {string} href
  * @param {string} name
  */
-function setLink(parent, doctype, name) {
+function setLink(parent, href) {
 	const a = document.createElement('a');
 	let f;
 	// eslint-disable-next-line no-cond-assign
@@ -15,7 +15,7 @@ function setLink(parent, doctype, name) {
 		a.appendChild(f);
 	}
 	parent.appendChild(a);
-	a.href = frappe.utils.get_form_link(doctype, name);
+	a.href = href;
 
 }
 frappe.ui.form.on('Tianjy Activity', {
@@ -23,11 +23,16 @@ frappe.ui.form.on('Tianjy Activity', {
 		const dt = frm.doc.doc_type;
 		const dn = frm.doc.doc;
 		if (dt && dn) {
-			setLink(frm.fields_dict.doc.disp_area, dt, dn);
+			const href = frappe.utils.get_form_link(dt, dn);
+			setLink(frm.fields_dict.doc.disp_area, href);
 		}
-		const {comment} = frm.doc;
+		const {comment, file} = frm.doc;
 		if (comment) {
-			setLink(frm.fields_dict.comment.disp_area, 'Comment', comment);
+			const href = frappe.utils.get_form_link('Comment', comment);
+			setLink(frm.fields_dict.comment.disp_area, href);
+		}
+		if (file) {
+			setLink(frm.fields_dict.file.disp_area, file);
 		}
 	},
 });

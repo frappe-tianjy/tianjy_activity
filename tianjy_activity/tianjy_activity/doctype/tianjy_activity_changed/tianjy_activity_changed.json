@@ -7,6 +7,8 @@
  "field_order": [
   "type",
   "field",
+  "new_value",
+  "old_value",
   "new",
   "old",
   "row_field",
@@ -16,7 +18,7 @@
  "fields": [
   {
    "fieldname": "type",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
    "set_only_once": 1
@@ -25,21 +27,19 @@
    "fieldname": "field",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "field",
+   "label": "Field",
    "set_only_once": 1
   },
   {
    "fieldname": "new",
    "fieldtype": "Code",
-   "in_list_view": 1,
-   "label": "New",
+   "label": "New Content",
    "set_only_once": 1
   },
   {
    "fieldname": "old",
    "fieldtype": "Code",
-   "in_list_view": 1,
-   "label": "Old",
+   "label": "Old Content",
    "set_only_once": 1
   },
   {
@@ -59,12 +59,26 @@
    "fieldtype": "Data",
    "label": "Row Index",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "new_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "New Value",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "old_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Old Value",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-12 13:29:03.055406",
+ "modified": "2023-10-25 15:59:20.105193",
  "modified_by": "Administrator",
  "module": "Tianjy Activity",
  "name": "Tianjy Activity Changed",
