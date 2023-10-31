@@ -67,7 +67,7 @@ def get_changed(current, before):
 	for field, row_name, row_index, row in diff['row_changed']:
 		for row_field, old, new in row:
 			data = dict(field = field, type="Row Changed", row_name = row_name, row_index = row_index, row_field = row_field, old = old, new = new, old_value = old, new_value = new)
-			if df := get_field(row_field, meta):
+			if df := get_field(field, meta):
 				data['field'] = get_label(df)
 				if df.fieldtype not in ['Table', 'Table Multiple']: return data
 				table_meta = frappe.get_meta(df.options)
@@ -140,7 +140,10 @@ def comment_on_change(comment, *args, **argv):
 	if comment.comment_type != 'Comment': return
 	if not frappe.db.exists('Comment', comment.name): return
 	doctype = comment.reference_doctype
-	comment_before = comment.get('_doc_before_save', None)
+	try:
+		comment_before = comment._doc_before_save
+	except:
+		return
 	if not comment_before and frappe.flags.in_patch: return
 	cfg = TianjyActivityConfiguration.find(doctype)
 	if not cfg: return
