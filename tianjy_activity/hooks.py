@@ -6,7 +6,7 @@ app_publisher = "guigu"
 app_description = "Tianjy Activity"
 app_email = "guigu"
 app_license = "MIT"
-required_apps = ["tianjy_organization"]
+required_apps = ["https://github.com/frappe-tianjy/tianjy_organization"]
 
 # Document Events
 # ---------------
